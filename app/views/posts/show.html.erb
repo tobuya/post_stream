@@ -1,1 +1,22 @@
-<h1>Here is a list of all posts</h1>
+<main>
+    <div class="post-container">
+        <h2>
+            <%= @post.title%> by <%= @post.author.name%>
+        </h2>
+        <p class="comment-like-count">
+            Comments: <%= @post.comments_counter%>, Likes:<%= @post.likes_counter%>
+        </p>
+        <div>
+            <%= @post.text%>
+        </div>
+    </div>
+    <div class="comments post-comments">
+        <h5>Comments</h5>
+        <% @comments=Post.find(@post.id).comments %>
+            <% @comments.each do |comment| %>
+                <p>
+                    <%= comment.author.name %> : <%= comment.text %>
+                </p>
+            <% end %>
+    </div>
+</main>
