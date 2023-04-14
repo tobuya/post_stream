@@ -1,1 +1,31 @@
-<h1>Here is a list of all Users</h1>
+<main>
+    <div class="user-container">
+        <section class="user">
+            <img src=<%= @user.photo %> alt="User Photo" class="user-photo">
+            <div class="user-details">
+                <h2 class="user-name"><%= @user.name%></h2>
+                <h5 class="user-post-count">Number of posts: <%= @user.posts_counter %> </h5>
+            </div>
+        </section>
+        <section class="user-bio">
+            <h3>Bio</h3>
+            <p><%= @user.bio %></p>
+        </section>
+        <section class="user-posts">
+            <h3>Recent Posts</h3>
+            <% @user.get_recent_posts.each do |post| %>
+            <a href="<%=@user.id%>/posts/<%=post.id%>" class="user-post-link">
+                <div class="post">
+                    <h4><%= post.title %></h4>
+                    <p><%= truncate(post.text, length: 180) %></p>
+                    <p class="comment-like-count">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+                </div>
+            </a>
+            <% end %>
+            <button class="button">
+                <a href="<%=@user.id%>/posts/" class="user-post-link">See all posts</a>
+            </button>
+        </section>
+    </div>
+
+</main>
