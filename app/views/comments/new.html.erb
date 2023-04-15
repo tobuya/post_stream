@@ -1,0 +1,11 @@
+<main>
+    <div class="new-comment-container">
+        <h1>Add a comment</h1>
+        <%= form_with model: @comment, url: user_post_comments_path(@post) do |form| %>
+          <div class='comment-form'>
+             <%= form.text_area :text, required: true, autofocus: true, placeholder: 'Leave a comment', rows: "12", height: "auto" %>
+             <%= form.submit "Comment", class: "button" %>
+          </div>
+        <% end %>
+    </div>
+</main>
