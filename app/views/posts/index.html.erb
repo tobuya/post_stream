@@ -9,7 +9,7 @@
         </section>
         <section class="user-posts">
             <h3>All Posts from <%= @user.name %></h3>
-            <% @user.posts.each do |post| %>
+            <% @user.posts.includes(:comments).each do |post| %>
             <a href="/users/<%=@user.id%>/posts/<%=post.id%>" class="user-post-link">
                 <div class="post">
                     <h4><%= post.title %></h4>
