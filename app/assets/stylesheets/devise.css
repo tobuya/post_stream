@@ -10,6 +10,11 @@
   box-shadow: 12.5px 12.5px 10px rgba(0, 0, 0, 0.055),
     100px 100px 80px rgba(0, 0, 0, 0.11);
   padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-container h2 {
+  margin-bottom: 1rem;
 }
 
 .form-container form {
@@ -40,4 +45,8 @@
   padding: 0.5rem 1rem;
   font-size: 1rem;
   margin: 1rem 0;
+}
+
+.field-check {
+  width: 100%;
 }
