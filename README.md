@@ -133,7 +133,7 @@ Example command:
 - Twitter: [@twitterhandle](https://twitter.com/MullerTheGreat1)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/tobuya)
 
-👤 **Thomas Obuya**
+👤 **Hein Thant**
 
 - GitHub: [@githubhandle](https://github.com/indiecodermm)
 - Gmail: hthant00chk@gmail.com
