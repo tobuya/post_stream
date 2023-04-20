@@ -1,0 +1,35 @@
+<section>
+<div class="form-container">
+<h2 class="form-title">Sign Up</h2>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name, required: true, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email, required: true, autocomplete: "email"%>
+  </div>
+
+  <div class="field">
+    <%= f.label "Password #{"(" + @minimum_password_length.to_s + " characters minimum)"}" %>
+    <%= f.password_field :password, required: true, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation, required: true, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+  <div>
+    <%= render "devise/shared/links" %>
+  </div>
+</div>
+</section>

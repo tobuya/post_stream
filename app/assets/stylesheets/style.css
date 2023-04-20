@@ -4,6 +4,23 @@
     padding: 0;
 }
 
+.header,
+.homepage {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.homepage {
+    justify-content: flex-end;
+}
+
+.logo {
+    font-size: 1.65rem;
+    font-weight: 800;
+}
+
 .users-container {
     display: flex;
     flex-direction: column;

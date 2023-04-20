@@ -25,7 +25,6 @@
 - [🤝 Contributing](#contributing)
 - [⭐️ Show your support](#support)
 - [🙏 Acknowledgements](#acknowledgements)
-- [❓ FAQ (OPTIONAL)](#faq)
 - [📝 License](#license)
 
 <!-- PROJECT DESCRIPTION -->
@@ -64,7 +63,7 @@
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link to be updated soon](#)
+- [Live Demo Link to be updated soon]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -133,7 +132,7 @@ Example command:
 - Twitter: [@twitterhandle](https://twitter.com/MullerTheGreat1)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/tobuya)
 
-👤 **Thomas Obuya**
+👤 **Hein Thant**
 
 - GitHub: [@githubhandle](https://github.com/indiecodermm)
 - Gmail: hthant00chk@gmail.com
@@ -177,7 +176,7 @@ If you like this project give a star ⭐️
 I would like to thank fellow Micronauts.
 
 ## 📝 License <a name="license"></a>
-This project is [MIT](./LICENSE) licensed.
+This project is [MIT](./LICENCE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
