@@ -5,12 +5,14 @@ class PostsController < ApplicationController
     @user_posts = Post.where(author_id: @user.id)
     @user_comments = Comment.where(user_id: @user.id)
     @post_comments = Comment.where(post_id: @user_posts.ids)
+    @current_user = current_user
   end
 
   def show
     @post = Post.find(params[:id])
     @post_comments = Comment.where(post_id: @post)
     @like = Like.new
+    @current_user = current_user
   end
 
   def new
@@ -33,9 +35,9 @@ class PostsController < ApplicationController
     end
   end
 
-  def destroy 
+  def destroy
     @post = Post.find(params[:id])
-    @post.destroy 
+    @post.destroy
 
     redirect_to user_path(current_user)
   end
