@@ -23,6 +23,13 @@
                 <p>
                     <%= comment.author.name %> : <%= comment.text %>
                 </p>
+                <div>
+                    <% if can? :destroy, @post %>
+                      <%= form_with model: [@current_user, @post], method: :delete do |f| %>
+                        <%= f.submit "Delete" %>
+                      <% end %>
+                    <% end %>
+                </div>
             <% end %>
     </div>
 </main>
