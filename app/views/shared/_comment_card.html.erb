@@ -1,0 +1,33 @@
+<div class="comment-container">
+  <h4>Comments</h4>
+
+  <ul>
+
+  <% if comments.empty? %>
+      <small>No one has commented yet.</small>
+  <% end %>
+
+  <% comments.each do |comment| %>
+      <li>
+          <div>
+              <span style="background-color: <%= %w[green red purple orange].sample %>"><%= comment.author.name[0].upcase %></span>
+              <p><%= comment.author.name %></p>
+          </div>
+
+          <di>
+              <p><%= comment.text %></p>
+          </di>
+
+          <% if can? :destroy, comment %>
+          <div>
+              <%= form_with model: [@current_user, comment.post, comment], method: :delete do |f| %>
+                  <%= f.submit "Remove" %>
+              <% end %>
+          </div>
+          <% end %>
+
+      </li>
+  <% end %>
+
+  </ul>
+</div>
