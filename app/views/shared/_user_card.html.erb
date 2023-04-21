@@ -7,7 +7,10 @@
         <% end %>
     </div>
     <div class="user-info">
+    <header class="user-header">
         <h2><%= link_to user.name, user_path(user) %></h2>
+        <span><%= user.role || "member" %></span>
+    </header>
         <p>Number of Posts: <%= user.posts_counter || 0 %></p>
     </div>
 </div>

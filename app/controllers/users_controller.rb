@@ -8,5 +8,6 @@ class UsersController < ApplicationController
     @user = User.includes(posts: :comments).find(params[:id])
     @user_posts = @user.posts
     @recent_posts = @user.get_recent_posts.includes(:author, :comments)
+    @current_user = current_user
   end
 end

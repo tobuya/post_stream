@@ -6,6 +6,11 @@
                 <h2 class="user-name"><%= @user.name%></h2>
                 <h5 class="user-post-count">Number of posts: <%= @user.posts_counter %> </h5>
             </div>
+            <% if @current_user == @user %>
+              <%= form_with url: destroy_user_session_path, method: :delete do |f| %>
+                 <%= f.submit "Log Out" %>
+              <% end %>
+            <% end %>
         </section>
         <section class="user-bio">
             <h3>Bio</h3>

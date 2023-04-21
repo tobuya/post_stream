@@ -15,6 +15,12 @@
             <%= form.submit 'Like post', class: 'button' %>
         <% end %>
         <%= link_to "Comment", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
+        <%# Button to delete current post  %>
+        <% if can? :destroy, @post %>
+            <%= form_with model: [@current_user, @post], method: :delete do |f| %>                        
+            <%= f.submit "Delete Post", class: "button" %>
+            <% end %>
+        <% end %>
     </div>
     <div class="comments post-comments">
         <h5>Comments</h5>
@@ -23,6 +29,14 @@
                 <p>
                     <%= comment.author.name %> : <%= comment.text %>
                 </p>
+                <div>
+                <%# Button to delete each comment  %>
+                    <% if can? :destroy, comment %>
+                      <%= form_with model: [@current_user, comment.post, comment], method: :delete do |f| %>                        
+                      <%= f.submit "Remove Comment" %>
+                      <% end %>
+                    <% end %>
+                </div>
             <% end %>
     </div>
 </main>
