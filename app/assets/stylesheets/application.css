@@ -21,6 +21,8 @@
   --white: #fff;
   --darker: #000;
   --dark: #0f0f0f;
+  --gray: #ccc;
+  --blue: #405cf5;
 }
 
 .shadow {
@@ -54,4 +56,21 @@
 .link:hover::before {
   visibility: visible;
   transform: scaleX(1);
+}
+
+.flex-center-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
+  color: var(--blue);
+  font-weight: 600;
+}
+
+.links:hover {
+  color: var(--green);
+  font-size: 1.025rem;
+  text-decoration: none;
 }
