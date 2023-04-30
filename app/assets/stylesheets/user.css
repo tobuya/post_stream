@@ -13,6 +13,25 @@
   gap: 2.5rem;
 }
 
+.current-user{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 2rem;
+}
+
+.para {
+  align-self: flex-end;
+  font-weight: 600;
+}
+
+.users-container {
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
 .join {
   padding: 0.5rem 2rem;
   background-color: var(--primary);
@@ -48,7 +67,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #fff;
+  background-color: var(--white);
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 40px;
@@ -70,3 +89,53 @@
 .feature:hover i {
   color: #2196f3;
 }
+
+/* Shared: user_card.html.erb */
+.user-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 1.5rem;
+  border-radius: 8px;
+  border: 2px solid var(--dark);
+  padding: 1.2rem;
+}
+
+.user-photo,
+.user-photo img {
+  width: 120px;
+  height: 120px;
+  border-radius: 8px 0 8px 0;
+}
+
+.membership {
+  font-family: 'Great Vibes', cursive;
+  font-size: larger;
+  color: var(--green)
+}
+
+.posts-number {
+  padding-bottom: 2px;
+  text-align: center;
+  border: none;
+}
+
+.logged-in {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.user-name {
+  color: var(--white);
+  font-weight: 900;
+}
+
+.logout-btn {
+  padding: 6px;
+  background-color: var(--danger);
+  color: var(--white);
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
