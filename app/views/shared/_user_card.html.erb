@@ -1,16 +1,16 @@
-<div class="user-card">
+<section class="user-card shadow">
     <div class="user-photo">
         <% if user.photo %>
-            <img src="<%= user.photo %>" alt="profile">
+            <img src="<%= user.photo %>" alt="No Profile Photo", class="membership">
         <% else %>
-            <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..200)}.jpg" %>" alt="profile">
+            <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..80)}.jpg" %>" alt="No Profile Photo", class="membership">
         <% end %>
     </div>
     <div class="user-info">
-    <header class="user-header">
+      <header class="user-header">
         <h2><%= link_to user.name, user_path(user) %></h2>
-        <span><%= user.role || "member" %></span>
-    </header>
-        <p>Number of Posts: <%= user.posts_counter || 0 %></p>
+        <span class="membership"><%= user.role || "member" %></span>
+      </header>
     </div>
-</div>
+    <p class="posts-number">Number of Posts: <%= user.posts_counter || 0 %></p>
+</section>
