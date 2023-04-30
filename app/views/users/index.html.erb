@@ -2,11 +2,13 @@
     <%= render "shared/header", current_user: @current_user %>
     <div class="user-status">
       <% if user_signed_in? %>
-        <%= link_to "+ New Post", new_user_post_path(@current_user) %>
-        <div class="users-container">
-          <% @users.each do |user| %>
-            <%= render "shared/user_card", user: user %>
-          <% end %>
+        <div class="current-user">
+          <p class="para"><%= link_to "+ New Post", new_user_post_path(@current_user) %></p>
+          <div class="users-container">
+            <% @users.each do |user| %>
+              <%= render "shared/user_card", user: user %>
+            <% end %>
+          </div>
         </div>
       <% else %>
         <div class="public">
