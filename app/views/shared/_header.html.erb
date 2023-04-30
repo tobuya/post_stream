@@ -4,9 +4,13 @@
     <%= link_to "PostStream", root_path, class: "brand" %>
 
     <% if user_signed_in? %>
-        <div>
-          <%= link_to current_user.name, user_path(current_user) %>
-          <span><%= current_user.name[0].upcase %></span>
+        <div class="logged-in">
+          <%= link_to current_user.name, user_path(current_user), class: "user-name" %>
+          <span>
+            <%= form_with url: destroy_user_session_path, method: :delete do |f| %>
+              <%= f.submit "Log Out", class: "logout-btn shadow"%>
+            <% end %>
+          </span>
         </div>
     <% else %>
         <div class="authentication">
