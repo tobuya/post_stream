@@ -1,0 +1,41 @@
+/* Posts: new.html.erb */
+.new-post-section {
+    align-items: flex-start;
+    height: 100vh;
+    background-color: var(--primary);
+    color: var(--white);
+}
+
+.new-post-container {
+    width: 50vw;
+}
+
+.new-post-title {
+    padding-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.btn-cancel {
+    color: var(--white);
+    font-weight: 500;
+    font-size: large;
+}
+
+.btn-cancel:hover {
+    color: var(--danger);
+    font-weight: 900;
+    text-decoration: none;
+    font-size: larger;
+}
+
+.new-post-input {
+    padding: 0.8rem;
+}
+
+.new-post-input:focus {
+    outline: none;
+}
+
+.new-post-submit-btn {
+    box-shadow: 0;
+}

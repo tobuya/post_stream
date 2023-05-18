@@ -50,7 +50,7 @@
 }
 
 .link:hover {
-  color: #fff;
+  color: var(--white);
 }
 
 .link:hover::before {
@@ -62,6 +62,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.align-self-center {
+  align-self: center;
+  text-align: center;
 }
 
 .links {
