@@ -1,0 +1,91 @@
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--primary);
+}
+
+.brand {
+  text-decoration: none;
+  font-size: 3.2rem;
+  color: var(--white);
+  transition: all 0.2s ease-in;
+  font-family: 'Great Vibes', cursive;
+}
+
+.brand:hover {
+  color: var(--danger);
+}
+
+.authentication {
+  padding: 0.8rem;
+  display: flex;
+  gap: 1.2rem;
+}
+
+.auth-link {
+  padding: 0.4rem;
+  text-decoration: none;
+  color: var(--darker);
+  background-color: var(--white);
+  border-radius: 5px;
+}
+
+.auth-link:hover {
+  color: var(--green);
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  background-color: var(--dark);
+  color: #fff;
+  font-size: 1.2rem;
+  padding: 1.4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.dev-contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.socials {
+  display: flex;
+  padding: 1rem;
+  gap: 1.5rem;
+}
+
+.social-link {
+  color: var(--white);
+  text-decoration: none;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.social-link:hover {
+  opacity: 1;
+}
+
+.footer-bottom {
+  text-align: center;
+  font-size: 1rem;
+  opacity: 0.7;
+  margin-top: 1rem;
+}
