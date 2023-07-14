@@ -61,7 +61,7 @@ To run this project locally, you'll need to follow these steps.
 ### 📋 Prerequisites
 
 Make sure you have the following installed on your machine:
-- [Ruby 3.1.3 or higher](https://www.ruby-lang.org/en/)
+- [Ruby 3.2.2 or higher](https://www.ruby-lang.org/en/)
 - [Rails 7.0.4 or higher](https://rubyonrails.org/)
 - [PostgreSQL 15.2 or higher](https://www.postgresql.org/)
 
