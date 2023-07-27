@@ -72,6 +72,7 @@ Clone this repository to your desired folder.
 ```sh
 cd my-project
 git clone git@github.com:tobuya/post_stream.git
+cd post_stream
 ```
 
 ### 📥 Installation
