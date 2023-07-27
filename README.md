@@ -70,7 +70,7 @@ Make sure you have the following installed on your machine:
 Clone this repository to your desired folder.
 
 ```sh
-cd my-project
+cd my-desired-folder
 git clone git@github.com:tobuya/post_stream.git
 cd post_stream
 ```
@@ -120,21 +120,20 @@ rspec spec --format doc
 
 👤 **Thomas Obuya**
 
-- GitHub: [@githubhandle](https://github.com/tobuya)
-- Twitter: [@twitterhandle](https://twitter.com/MullerTheGreat1)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/tobuya)
+- [GitHub](https://github.com/tobuya)
+- [Medium](https://medium.com/@tobuya)
+- [LinkedIn](https://linkedin.com/in/tobuya)
 
 👤 **Hein Thant**
 
-- GitHub: [@IndieCoderMM](https://github.com/indiecodermm)
-- LinkedIn: [@hthantoo](https://linkedin.com/in/hthantoo)
-- Gmail: hthant00chk@gmail.com
+- [GitHub](https://github.com/indiecodermm)
+- [Medium](https://hthant.medium.com/)
+- [LinkedIn](https://linkedin.com/in/hthantoo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🎯 Future Features  <a name="future-features"></a>
 
-- [ ] Mobile responsive design
 - [ ] Search and filter users and posts
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
