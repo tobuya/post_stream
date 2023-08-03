@@ -9,7 +9,7 @@
 
 .brand {
   text-decoration: none;
-  font-size: 3.2rem;
+  font-size: 2.85rem;
   color: var(--white);
   transition: all 0.2s ease-in;
   font-family: 'Great Vibes', cursive;
@@ -26,7 +26,7 @@
 }
 
 .auth-link {
-  padding: 0.4rem;
+  padding: 0.25rem;
   text-decoration: none;
   color: var(--darker);
   background-color: var(--white);
@@ -35,7 +35,7 @@
 
 .auth-link:hover {
   color: var(--green);
-  padding: 0.5rem;
+  padding: 0.35rem;
   display: flex;
   align-items: center;
   justify-content: center;
