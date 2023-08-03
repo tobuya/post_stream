@@ -79,3 +79,20 @@
   font-size: 1.025rem;
   text-decoration: none;
 }
+
+@media only screen and (max-width: 768px) {
+  .feature-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, 1fr);
+  }
+
+  .join {
+    margin: 0 2rem;
+    padding: 0.5rem 0.85rem;
+  }
+
+  .contact-section {
+    flex-direction: column;
+  }
+}
