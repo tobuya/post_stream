@@ -81,6 +81,10 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .brand {
+    font-size: 1.85rem;
+  }
+
   .feature-grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -94,5 +98,14 @@
 
   .contact-section {
     flex-direction: column;
+  }
+
+  .users-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .current-user {
+    gap: 0.5rem;
   }
 }
