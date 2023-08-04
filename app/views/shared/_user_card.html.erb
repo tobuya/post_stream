@@ -8,7 +8,7 @@
     </div>
     <div class="user-info">
       <header class="user-header">
-        <h2><%= link_to user.name, user_path(user) %></h2>
+        <h2 class="name"><%= link_to user.name, user_path(user) %></h2>
         <span class="membership"><%= user.role || "member" %></span>
       </header>
     </div>
