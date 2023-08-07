@@ -15,6 +15,10 @@
     font-weight: 600;
 }
 
+.post-form {
+    color: var(--dark);
+}
+
 .btn-cancel {
     color: var(--white);
     font-weight: 500;
