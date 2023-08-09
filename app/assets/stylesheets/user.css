@@ -115,10 +115,8 @@
 
 .user-photo,
 .user-photo img {
-  width: 120px;
-  height: 120px;
   border-color: var(--gray);
-  border-radius: 8px 0 8px 0;
+  border-radius: 8px 0;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
