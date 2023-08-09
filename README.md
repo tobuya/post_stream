@@ -135,7 +135,7 @@ rspec spec --format doc
 ## 🎯 Future Features  <a name="future-features"></a>
 
 - [ ] Search and filter users and posts
-- [ ] Mobile Responsiveness
+- [ ] Implement sharing of posts by other users
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
