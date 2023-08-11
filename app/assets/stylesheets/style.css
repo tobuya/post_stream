@@ -44,7 +44,6 @@
     grid-template-rows: 1fr;
     grid-template-columns: 0.2fr 0.8fr;
     padding: 0.25rem 1.25rem;
-    border: 2px solid red;
 }
 
 .user-photo-profile {
@@ -84,6 +83,13 @@
     border: 1px solid var(--gray);
     height: 120px;
     margin: 0.25rem 1.25rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+}
+
+.user-bio h3 {
+    color: var(--blue);
+    font-weight: 500;
 }
 
 .user-posts {
@@ -91,15 +97,25 @@
     flex-direction: column;
     gap: 0.5rem;
     margin: 0.25rem 1.25rem;
-    border: 2px solid red;
+}
+
+.user-posts h3 {
+    color: var(--green);
+    font-weight: 700;
 }
 
 .post {
     display: flex;
     flex-direction: column;
     border: 2px solid var(--gray);
-    gap: 15px;
+    gap: 5px;
     padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post h4 {
+    color: var(--blue);
+    font-weight: 400;
 }
 
 .comment-like-count {
