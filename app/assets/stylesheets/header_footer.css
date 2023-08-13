@@ -13,10 +13,15 @@
   color: var(--white);
   transition: all 0.2s ease-in;
   font-family: 'Great Vibes', cursive;
+  padding: 0 0.75rem;
+  border-radius: 1.25rem 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .brand:hover {
   color: var(--danger);
+  border: 2px solid gray;
+  padding: 0.25rem;
 }
 
 .authentication {
