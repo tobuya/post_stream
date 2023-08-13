@@ -1,17 +1,12 @@
+<%= render "shared/header", current_user: @current_user %>
 <main>
     <div class="user-container">
         <section class="user">
-            <div class="user-photo">
-              <% if @user.photo %>
-                <img src="<%= user.photo %>" alt="No Profile Photo", class="membership">
-              <% else %>
-                <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..80)}.jpg" %>" alt="No Profile Photo", class="membership">
-              <% end %>
-            </div>
-            <div class="user-details">
-                <h2 class="user-name"><%= @user.name%></h2>
-                <h5 class="user-post-count">Number of posts: <%= @user.posts_counter %> </h5>
-            </div>
+          <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..80)}.jpg" %>" alt="No Profile Photo", class="user-photo-profile">
+          <div class="user-details">
+            <h2 class="user-name-profile"><%= @user.name%></h2>
+            <h5 class="user-post-count">Number of posts: <%= @user.posts_counter %> </h5>
+          </div>
         </section>
         <section class="user-posts">
             <h3>All Posts from <%= @user.name %></h3>
