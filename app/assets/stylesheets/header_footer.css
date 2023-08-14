@@ -21,7 +21,7 @@
 .brand:hover {
   color: var(--danger);
   border: 2px solid gray;
-  padding: 0.25rem;
+  padding: 0 1.25rem;
 }
 
 .authentication {
