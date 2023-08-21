@@ -29,10 +29,6 @@
     padding: 30px;
 }
 
-.new-post-section {
-    padding: 0 0 15px 30px;
-}
-
 .users-link,
 .user-post-link {
     text-decoration: none;
@@ -110,7 +106,7 @@
     border: 2px solid var(--gray);
     gap: 5px;
     padding: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
 }
 
 .post h4 {
@@ -145,9 +141,8 @@
     flex-direction: column;
     gap: 5px;
     padding: 5px;
-    border: 1px solid black;
-    margin-top: 5px;
-    box-shadow: 0 2px 2px 2px black;
+    border: 0 2px 2px 2px solid var(--gray);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .post-container {
@@ -170,8 +165,7 @@
     gap: 15px;
 }
 
-.new-comment-container,
-.new-post-container {
+.new-comment-container {
     display: flex;
     flex-direction: column;
     align-items: center;

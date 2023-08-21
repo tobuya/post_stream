@@ -2,44 +2,65 @@
 .new-post-section {
     align-items: flex-start;
     height: 100vh;
-    background-color: var(--primary);
-    color: var(--white);
 }
 
 .new-post-container {
-    width: 50vw;
+    margin-top: 0.85rem;
+    width: 70vw;
 }
 
 .new-post-title {
-    padding-bottom: 1.2rem;
-    font-weight: 600;
+    font-weight: 800;
+    color: var(--green);
+    font-size: x-large;
+    margin-bottom: 0.45rem;
 }
 
 .post-form {
     color: var(--dark);
 }
 
-.btn-cancel {
-    color: var(--white);
-    font-weight: 500;
-    font-size: large;
+.btn-container-div {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0.8rem;
 }
 
+.btn-submit {
+    background-color: var(--green);
+    color: var(--white);
+    border-radius: 8px;
+    font-weight: 500;
+    width: 40%;
+    padding: 0.8rem 0;
+    cursor: pointer;
+}
+
+.btn-cancel {
+    font-weight: 500;
+    background-color: var(--danger);
+    color: var(--white);
+    border-radius: 8px;
+    width: 40%;
+    text-align: center;
+    padding: 0.8rem 0;
+}
+
+.btn-submit:hover,
 .btn-cancel:hover {
-    color: var(--danger);
-    font-weight: 900;
     text-decoration: none;
-    font-size: larger;
+    font-weight: 800;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .new-post-input {
     padding: 0.8rem;
+    border: 2px solid var(--gray);
+    border-radius: 3px;
 }
 
 .new-post-input:focus {
     outline: none;
-}
-
-.new-post-submit-btn {
-    box-shadow: 0;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }

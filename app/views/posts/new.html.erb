@@ -1,13 +1,18 @@
-<main class="flex-center-center new-post-section">
+<section class="new-post-section">
+  <%= render "shared/header", current_user: @current_user %>
+  <main class="flex-center-center">
     <div class="new-post-container">
-      <h1 class="align-self-center new-post-title">Add New Post</h1>
+      <h1 class="align-self-center new-post-title">Add a new post</h1>
       <%= form_with model: @post, url: user_posts_path(@user) do |form| %>
-      <div class="post-form">
-        <%= form.text_field :title, required: true, placeholder: 'Post title', autofocus: true, class: "new-post-input" %>
-        <%= form.text_area :text, required: true, autofocus: true, placeholder: 'Write your post here', rows: "12", height: "auto", class: "new-post-input" %>
-        <%= form.submit "Submit", class: "button shadow" %>
-        <%= link_to 'Cancel', user_posts_path, class: "btn-cancel align-self-center" %>
-      </div>
+        <div class="post-form">
+          <%= form.text_field :title, required: true, placeholder: 'Post title', class: "new-post-input" %>
+          <%= form.text_area :text, required: true, placeholder: 'Write your post here', rows: "12", height: "auto", class: "new-post-input" %>
+          <div class="btn-container-div">
+            <%= form.submit "Submit", class: "btn-submit" %>
+            <%= link_to 'Cancel', user_posts_path, class: "btn-cancel" %>
+          </div>
+        </div>
       <% end %>
     </div>
-</main>
+  </main>
+</section>

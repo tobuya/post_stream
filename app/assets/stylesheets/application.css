@@ -25,10 +25,6 @@
   --blue: #405cf5;
 }
 
-.shadow {
-  box-shadow: 0 5px 10px -5px var(--dark);
-}
-
 .link {
   color: #ffcd00;
   text-decoration: none;

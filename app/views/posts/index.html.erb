@@ -13,9 +13,9 @@
             <% @user.posts.includes(:comments).each do |post| %>
             <a href="/users/<%=@user.id%>/posts/<%=post.id%>" class="user-post-link">
                 <div class="post">
-                    <h4><%= post.title %></h4>
-                    <p><%= truncate(post.text, length: 180) %></p>
-                    <p class="comment-like-count">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+                  <h4><%= post.title %></h4>
+                  <p><%= truncate(post.text, length: 180) %></p>
+                  <p class="comment-like-count">Comments 💬: <%= post.comments_counter %>, Likes 👍: <%= post.likes_counter %></p>
                 </div>
                 <div class="comments">
                     <h4>Comments</h4>
