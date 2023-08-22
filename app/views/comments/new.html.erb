@@ -1,10 +1,14 @@
-<main>
-    <div class="new-comment-container">
-        <h1>Add a comment</h1>
+<%= render "shared/header"%>
+<main class="flex-center-center">
+    <div class="new-post-container">
+        <h1 class="align-self-center new-post-title">Add a comment</h1>
         <%= form_with model: @comment, url: user_post_comments_path(@post) do |form| %>
-          <div class='comment-form'>
-             <%= form.text_area :text, required: true, autofocus: true, placeholder: 'Leave a comment', rows: "12", height: "auto" %>
-             <%= form.submit "Comment", class: "button" %>
+          <div class='post-form'>
+             <%= form.text_area :text, required: true, placeholder: 'Leave a comment', rows: "12", height: "auto", class: "new-post-input" %>
+             <div class="btn-container-div">
+              <%= form.submit "Submit", class: "btn-submit" %>
+              <%= link_to 'Cancel', user_posts_path, class: "btn-cancel" %>
+             </div>
           </div>
         <% end %>
     </div>

@@ -165,15 +165,6 @@
     gap: 15px;
 }
 
-.new-comment-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
-}
-
-.comment-form,
 .post-form {
     display: flex;
     gap: 10px;
@@ -184,12 +175,4 @@
     cursor: pointer;
     box-shadow: none;
     color: green;
-}
-
-.comment-btn {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
