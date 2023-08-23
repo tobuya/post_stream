@@ -35,6 +35,11 @@
     color: black;
 }
 
+.user-post-link {
+    box-shadow: rgba(0, 0, 0, 0.2);
+    border: 1px solid var(--gray);
+}
+
 .user {
     display: grid;
     grid-template-rows: 1fr;
@@ -88,11 +93,24 @@
     font-weight: 500;
 }
 
+.all-post-header {
+    text-align: center;
+    padding: 0.5rem 0;
+    color: var(--primary);
+    opacity: 0.5;
+    font-weight: 900;
+}
+
 .user-posts {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     margin: 0.25rem 1.25rem;
+}
+
+.all-post-container {
+    flex-direction: column-reverse;
+    gap: 1rem;
 }
 
 .user-posts h3 {
@@ -103,7 +121,7 @@
 .post {
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--gray);
+    /* border: 2px solid var(--gray); */
     gap: 5px;
     padding: 5px;
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
@@ -111,7 +129,13 @@
 
 .post h4 {
     color: var(--blue);
-    font-weight: 400;
+    font-weight: 500;
+}
+
+.post h4:hover {
+    text-decoration: underline;
+    font-weight: 800;
+    color: var(--green);
 }
 
 .comment-like-count {
@@ -143,6 +167,11 @@
     padding: 5px;
     border: 0 2px 2px 2px solid var(--gray);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.comments h4 {
+    color: var(--primary);
+    opacity: 0.6;
 }
 
 .post-container {
