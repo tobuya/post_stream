@@ -8,8 +8,8 @@
             <h5 class="user-post-count">Number of posts: <%= @user.posts_counter %> </h5>
           </div>
         </section>
-        <section class="user-posts">
-            <h3>All Posts from <%= @user.name %></h3>
+        <h3 class="all-post-header">All Posts from <%= @user.name %></h3>
+        <section class="user-posts all-post-container">
             <% @user.posts.includes(:comments).each do |post| %>
             <a href="/users/<%=@user.id%>/posts/<%=post.id%>" class="user-post-link">
                 <div class="post">
@@ -25,9 +25,6 @@
                         </p>
                     <% end %>
                 </div>
-                <button class="button">
-                  <a href="/users/<%=@user.id%>/posts/<%=post.id%>" class="user-post-link">Pagination</a>
-                </button>
             </a>
             <% end %>
         </section>
