@@ -121,7 +121,6 @@
 .post {
     display: flex;
     flex-direction: column;
-    /* border: 2px solid var(--gray); */
     gap: 5px;
     padding: 5px;
     box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
@@ -141,6 +140,7 @@
 .comment-like-count {
     align-self: flex-end;
     font-weight: bold;
+    color: rgb(196 181 253);
 }
 
 .all-post-button {
@@ -177,11 +177,20 @@
 .post-container {
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-    border: 1px solid black;
-    margin: 30px;
-    box-shadow: 0 2px 2px 2px black;
+    gap: 10px;
+    padding: 1rem;
+    margin: 1.2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0,0.2);
+}
+
+.post-container h2 {
+    color: var(--green);
+    font-weight: 700;
+    font-size: x-large;
+}
+
+.post-container h6 {
+    color: rgb(56 189 248)
 }
 
 .post-comments {
@@ -189,9 +198,25 @@
 }
 
 .post-like-comment {
-    margin: 0 0 10px 30px;
+    margin: 1.2rem;
     display: flex;
-    gap: 15px;
+    justify-content: space-between;
+}
+
+.post-like-comment a,
+.button {
+    padding: 0.25rem 0.5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 28vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--danger);
+}
+
+.post-like-comment a:hover,
+.button:hover {
+    border: 2px solid var(--green);
 }
 
 .post-form {

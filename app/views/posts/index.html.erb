@@ -21,7 +21,7 @@
                     <h4>Comments</h4>
                     <% post.get_recent_comments.each do |comment| %>
                         <p  id="single-comment">
-                            <%= comment.author.name %> : <%= comment.text %>
+                            <span><%= comment.author.name %> : </span> <%= comment.text %>
                         </p>
                     <% end %>
                 </div>

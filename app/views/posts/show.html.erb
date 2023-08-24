@@ -4,22 +4,21 @@
         <h2>
             <%= @post.title%> by <%= @post.author.name%>
         </h2>
-        <p class="comment-like-count">
-            Comments: <%= @post.comments_counter%>, Likes:<%= @post.likes_counter%>
-        </p>
-        <div>
+        <h6>
             <%= @post.text%>
-        </div>
+        </h6>
+        <p class="comment-like-count">
+            Comments 💬: <%= @post.comments_counter %>, Likes 👍: <%= @post.likes_counter %>
+        </p>
     </div>
     <div class="post-like-comment">
         <%= form_with model: @like, url: user_post_likes_path(1, @post), scope: :like do |form|%>
-            <%= form.submit 'Like post', class: 'button' %>
+            <%= form.submit 'Like 👍', class: 'button' %>
         <% end %>
-        <%= link_to "Comment", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
-        <%# Button to delete current post  %>
+        <%= link_to "Comment 💬", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
         <% if can? :destroy, @post %>
             <%= form_with model: [@current_user, @post], method: :delete do |f| %>                        
-            <%= f.submit "Delete Post", class: "button" %>
+            <%= f.submit "Delete 🗑", class: "button" %>
             <% end %>
         <% end %>
     </div>
