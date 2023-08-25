@@ -164,9 +164,33 @@
     display: flex;
     flex-direction: column;
     gap: 5px;
-    padding: 5px;
+    padding: 1rem;
     border: 0 2px 2px 2px solid var(--gray);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-comment-container {
+    margin: 1.2rem;
+}
+
+.post-comment-container h3 {
+    color: var(--blue);
+    font-weight: 500;
+}
+
+#remove-comment-button {
+    margin: 0.25rem 0 1rem 0;
+    cursor: pointer;
+    padding: 0.15rem 0.85rem;
+    background-color: var(--danger);
+    color: var(--gray);
+    font-weight: 600;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+#remove-comment-button:hover {
+    color: var(--white);
 }
 
 .comments h4 {
@@ -191,10 +215,6 @@
 
 .post-container h6 {
     color: rgb(56 189 248)
-}
-
-.post-comments {
-    margin: 0 30px;
 }
 
 .post-like-comment {
