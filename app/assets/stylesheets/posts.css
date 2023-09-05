@@ -1,70 +1,70 @@
 /* Posts: new.html.erb */
 .new-post-section {
-    align-items: flex-start;
-    height: 100vh;
+  align-items: flex-start;
+  height: 100vh;
 }
 
 .new-post-container {
-    margin-top: 0.85rem;
-    width: 70vw;
+  margin-top: 0.85rem;
+  width: 70vw;
 }
 
 .new-post-title {
-    font-weight: 800;
-    color: var(--green);
-    font-size: x-large;
-    margin-bottom: 0.45rem;
+  font-weight: 800;
+  color: var(--green);
+  font-size: x-large;
+  margin-bottom: 0.45rem;
 }
 
 .post-form {
-    color: var(--dark);
+  color: var(--dark);
 }
 
 .btn-container-div {
-    display: flex;
-    justify-content: space-between;
-    margin: 0 0.8rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0.8rem;
 }
 
 .btn-submit {
-    background-color: var(--green);
-    color: var(--white);
-    border-radius: 8px;
-    font-weight: 500;
-    width: 40%;
-    padding: 0.8rem 0;
-    cursor: pointer;
+  background-color: var(--green);
+  color: var(--white);
+  border-radius: 8px;
+  font-weight: 500;
+  width: 40%;
+  padding: 0.8rem 0;
+  cursor: pointer;
 }
 
 .btn-cancel {
-    font-weight: 500;
-    background-color: var(--danger);
-    color: var(--white);
-    border-radius: 8px;
-    width: 40%;
-    text-align: center;
-    padding: 0.8rem 0;
+  font-weight: 500;
+  background-color: var(--danger);
+  color: var(--white);
+  border-radius: 8px;
+  width: 40%;
+  text-align: center;
+  padding: 0.8rem 0;
 }
 
 .btn-submit:hover,
 .btn-cancel:hover {
-    text-decoration: none;
-    font-weight: 800;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  font-weight: 800;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .new-post-input {
-    padding: 0.8rem;
-    border: 2px solid var(--gray);
-    border-radius: 3px;
+  padding: 0.8rem;
+  border: 2px solid var(--gray);
+  border-radius: 3px;
 }
 
 .new-post-input:focus {
-    outline: none;
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  outline: none;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 #single-comment span {
-    color: rgb(251 146 60);
+  color: rgb(251 146 60);
 }

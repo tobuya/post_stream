@@ -22,7 +22,7 @@
   gap: 2.5rem;
 }
 
-.current-user{
+.current-user {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -168,4 +168,3 @@
 .logout-btn:hover {
   background-color: var(--blue);
 }
-
