@@ -1,5 +1,6 @@
 <main>
     <%= render "shared/header", current_user: @current_user %>
+    <%= link_to "⬅️", root_path, class: "brand back" %>
     <div class="user-container">
         <section class="user">
             <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..80)}.jpg" %>" alt="No Profile Photo", class="user-photo-profile">
@@ -10,7 +11,7 @@
         </section>
         <section class="user-bio">
             <h3>Bio</h3>
-            <p><%= @user.bio %></p>
+            <p>Biology<%= @user.bio %></p>
         </section>
         <section class="user-posts">
             <h3>Recent Posts</h3>
