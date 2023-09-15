@@ -76,6 +76,17 @@
   text-decoration: none;
 }
 
+.back {
+  color: var(--dark);
+  font-size: 1.5rem;
+  padding: 1rem 0 0 0;
+  box-shadow: none;
+}
+
+.back:hover {
+  border: none;
+}
+
 @media only screen and (max-width: 768px) {
   .brand {
     font-size: 1.85rem;
@@ -85,6 +96,7 @@
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, 1fr);
+    padding: 10px;
   }
 
   .join {
