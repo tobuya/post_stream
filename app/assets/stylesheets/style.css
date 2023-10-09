@@ -238,7 +238,7 @@
 
 .post-like-comment a:hover,
 .button:hover {
-  border: 2px solid var(--green);
+  font-size: larger;
 }
 
 .post-form {

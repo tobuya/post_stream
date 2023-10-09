@@ -14,12 +14,12 @@
     </div>
     <div class="post-like-comment">
         <%= form_with model: @like, url: user_post_likes_path(1, @post), scope: :like do |form|%>
-            <%= form.submit 'Like 👍', class: 'button' %>
+            <%= form.submit '👍', class: 'button' %>
         <% end %>
-        <%= link_to "Comment 💬", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
+        <%= link_to "💬", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
         <% if can? :destroy, @post %>
             <%= form_with model: [@current_user, @post], method: :delete do |f| %>                        
-            <%= f.submit "Delete 🗑", class: "button" %>
+            <%= f.submit "🗑", class: "button" %>
             <% end %>
         <% end %>
     </div>
