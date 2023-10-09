@@ -1,5 +1,5 @@
 <%= render "shared/header", current_user: @current_user %>
-<%= link_to "⬅️", root_path, class: "brand back" %>
+<%= link_to "⬅️", user_path(@user), class: "brand back" %>
 <main>
     <div class="user-container">
         <section class="user">
