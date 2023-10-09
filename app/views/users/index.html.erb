@@ -6,7 +6,9 @@
           <p class="para"><%= link_to "+ New Post", new_user_post_path(@current_user) %></p>
           <div class="users-container">
             <% @users.each do |user| %>
-              <%= render "shared/user_card", user: user %>
+              <% unless user_signed_in? && user == @current_user%>
+                <%= render "shared/user_card", user: user %>
+              <% end %>
             <% end %>
           </div>
         </div>
