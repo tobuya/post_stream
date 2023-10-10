@@ -58,10 +58,12 @@ footer {
   align-items: center;
 }
 
-.contact-section {
-  display: flex;
-  justify-content: space-around;
-  width: 100%;
+footer h3 {
+  color: var(--primary);
+}
+
+footer h4 {
+  color: var(--green);
 }
 
 .dev-contact {
