@@ -21,13 +21,6 @@
   font-weight: 800;
 }
 
-.users-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 30px;
-}
-
 .users-link,
 .user-post-link {
   text-decoration: none;
