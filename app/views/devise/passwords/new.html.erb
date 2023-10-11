@@ -1,12 +1,13 @@
-<section class="registration-section flex-center-center">
-  <main class="form-container shadow">
+<section class="registration-section">
+  <%= render "shared/header" %>
+  <main class="form-container forgot-pwd">
     <h2 class="form-title">Forgot your password?</h2>
 
     <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-      <div class="field login">
-        <%= f.label :email %><br />
+      <div class="field">
+        <%= f.label :email %>
         <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
       </div>
 
@@ -14,9 +15,6 @@
         <%= f.submit "Send me reset password instructions", class: "shadow" %>
       </div>
     <% end %>
-
-    <div>
-      <%= render "devise/shared/links" %>
-    </div>
   </main>
+  <%= render "shared/footer" %>
 </section>

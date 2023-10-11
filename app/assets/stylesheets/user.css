@@ -59,7 +59,10 @@
   flex-direction: column;
 }
 
-.page-title {
+.features h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
   align-self: center;
 }
 
@@ -87,10 +90,9 @@
 }
 
 .feature h3 {
-  font-size: 24px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 20px;
+  font-weight: 500;
+  color: var(--primary);
+  font-size: 18px;
 }
 
 .feature p {
