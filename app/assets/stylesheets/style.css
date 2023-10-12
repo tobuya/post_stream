@@ -84,8 +84,10 @@
 }
 
 .user-bio p {
-  color: green;
-  border: 2px solid red;
+  color: var(--darker);
+  opacity: 0.65;
+  margin-bottom: 0.5rem;
+  font-size: 15px;
 }
 
 .all-post-header {

@@ -11,7 +11,11 @@
         </section>
         <section class="user-bio">
             <h3>Bio</h3>
-            <p>Biology<%= @user.bio %></p>
+            <% if @user.bio.present? %>
+                <p><%= @user.bio %></p>
+            <% else %>
+                <p><%= @user.name %> has not set a bio</p>
+            <% end %>
         </section>
         <section class="user-posts">
             <h3>Recent Posts</h3>
