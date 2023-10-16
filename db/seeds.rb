@@ -5,71 +5,91 @@ User.destroy_all
 
 # Users
 User.create(
-  name: "User 1",
-  email: "user1@example.com",
+  name: "Marcus",
+  email: "marcus@example.com",
   password: "password123",
-  bio: "Bio for User 1"
+  bio: "Descendant of Marcus Aurelius"
 )
 
 User.create(
-  name: "User 2",
-  email: "user2@example.com",
+  name: "Bob",
+  email: "bob@example.com",
   password: "password123",
-  bio: "Bio for User 2"
+  bio: "Reggea Music artist"
 )
 
 User.create(
-  name: "User 3",
-  email: "user3@example.com",
+  name: "Aaron",
+  email: "aaron@example.com",
   password: "password123",
-  bio: "Bio for User 3"
+  bio: "No bio needed, just look at me!"
 )
 
 User.create(
-  name: "User 4",
-  email: "user4@example.com",
+  name: "Takeoff",
+  email: "takeoff@example.com",
   password: "password123",
-  bio: "Bio for User 4"
+  bio: "Just another lab from the lab"
 )
 
 User.create(
-  name: "User 5",
-  email: "user5@example.com",
+  name: "Sean",
+  email: "sean@example.com",
   password: "password123",
-  bio: "Bio for User 5"
+  bio: "Director at SeanSonics"
 )
 
 User.create(
-  name: "User 6",
-  email: "user6@example.com",
+  name: "Odhiambo",
+  email: "odhiambo@example.com",
   password: "password123",
-  bio: "Bio for User 6"
+  bio: "Football player from Koth Biro"
 )
 
 # Posts
-user1 = User.find_by(email: "user1@example.com")
+user1 = User.find_by(email: "marcus@example.com")
 user1.posts.create(
-  title: "Post by User 1",
-  text: "This is a post created by User 1."
+  title: "Marcus Aurelius, the Philosopher Emperor",
+  text: "
+  Marcus Aurelius was not just an emperor;
+  he was also a renowned Stoic philosopher who wrote the famous 
+  'Meditations,' a collection of personal reflections on life, ethics,
+  and virtue.
+  "
 )
 user1.posts.create(
-  title: "Post by User 1",
-  text: "This is post 2 created by User 1."
+  title: "Marcus Aurelius and the Antonine Plague",
+  text: "
+  During his reign, Marcus Aurelius faced the Antonine Plague,
+  which decimated the Roman Empire.
+  This pandemic significantly impacted his rule and leadership
+  "
 )
 user1.posts.create(
-  title: "Post by User 1",
-  text: "This is post 3 created by User 1."
+  title: "The Adopted Emperor",
+  text: "
+  Marcus Aurelius was not born into the imperial family. 
+  He became emperor after being adopted by his predecessor, Antoninus Pius, 
+  demonstrating that Roman emperors could be chosen based 
+  on merit rather than birthright
+  "
 )
 user1.posts.create(
-  title: "Post by User 1",
-  text: "This is post 4 created by User 1."
+  title: "The Five Good Emperors",
+  text: "
+  Marcus Aurelius is often considered one of the 'Five Good Emperors' of Rome,
+  a period known for stability and prosperity. 
+  These emperors were praised for their wise and just rule
+  "
 )
 user1.posts.create(
-  title: "Post by User 1",
-  text: "This is post 5 created by User 1."
+  title: "The Roman Emperor Who Preferred Peace",
+  text: "Marcus Aurelius was more interested in philosophy and governance than military conquest. 
+  He actively sought to maintain peace and stability in the Roman Empire during his rule, 
+  despite external pressures"
 )
 
-user2 = User.find_by(email: "user2@example.com")
+user2 = User.find_by(email: "bob@example.com")
 user2.posts.create(
   title: "Post by User 2",
   text: "This is a post created by User 2."
@@ -91,7 +111,7 @@ user2.posts.create(
   text: "This is post 5 created by User 2."
 )
 
-user3 = User.find_by(email: "user3@example.com")
+user3 = User.find_by(email: "aaron@example.com")
 user3.posts.create(
   title: "Post by User 3",
   text: "This is a post created by User 3."
@@ -113,7 +133,7 @@ user3.posts.create(
   text: "This is post 5 created by User 3."
 )
 
-user4 = User.find_by(email: "user4@example.com")
+user4 = User.find_by(email: "takeoff@example.com")
 user4.posts.create(
   title: "Post by User 4",
   text: "This is a post created by User 4."
@@ -135,7 +155,7 @@ user4.posts.create(
   text: "This is post 5 created by User 4."
 )
 
-user5 = User.find_by(email: "user5@example.com")
+user5 = User.find_by(email: "sean@example.com")
 user5.posts.create(
   title: "Post by User 5",
   text: "This is a post created by User 5."
@@ -157,7 +177,7 @@ user5.posts.create(
   text: "This is post 5 created by User 5."
 )
 
-user6 = User.find_by(email: "user6@example.com")
+user6 = User.find_by(email: "odhiambo@example.com")
 user6.posts.create(
   title: "Post by User 6",
   text: "This is a post created by User 6."
