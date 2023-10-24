@@ -1,18 +1,21 @@
 <header class="header">
-    <div class="logo" >
-    <%= link_to "Blog App", root_path %>
-    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
 
-   <% if user_signed_in? %>
-        <div class="profile-container">
-            <%= link_to current_user.name, user_path(current_user) %>
-            <span><%= current_user.name[0].upcase %></span>
+    <%= link_to "PostStream", root_path, class: "brand" %>
+
+    <% if user_signed_in? %>
+        <div class="logged-in">
+          <%= link_to current_user.name, user_path(current_user), class: "user-name" %>
+          <span>
+            <%= form_with url: destroy_user_session_path, method: :delete do |f| %>
+              <%= f.submit "Log Out", class: "logout-btn shadow"%>
+            <% end %>
+          </span>
         </div>
     <% else %>
-        <div>
-        <%= link_to 'Register', new_user_registration_path %>
-        <%= link_to 'Log In', new_user_session_path %>
+        <div class="authentication">
+          <%= link_to 'Register', new_user_registration_path, class: "auth-link shadow" %>
+          <%= link_to 'Log In', new_user_session_path, class: "auth-link shadow" %>
         </div>
     <% end %>
-
 </header>

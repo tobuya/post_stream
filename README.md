@@ -1,182 +1,167 @@
 <a name="readme-top"></a>
-
-<div align="center">
-
-  <h3><b>Blog App</b></h3>
-
-</div>
-
-# 📗 Table of Contents
-
-- [📖 About the Project](#about-project)
-  - [🛠 Built With](#built-with)
-    - [Tech Stack](#tech-stack)
-    - [Key Features](#key-features)
-  - [🚀 Live Demo](#live-demo)
-- [💻 Getting Started](#getting-started)
-  - [Setup](#setup)
-  - [Prerequisites](#prerequisites)
-  - [Install](#install)
-  - [Usage](#usage)
-  - [Run tests](#run-tests)
-  - [Deployment](#triangular_flag_on_post-deployment)
-- [👥 Authors](#authors)
-- [🔭 Future Features](#future-features)
-- [🤝 Contributing](#contributing)
-- [⭐️ Show your support](#support)
-- [🙏 Acknowledgements](#acknowledgements)
-- [📝 License](#license)
-
-<!-- PROJECT DESCRIPTION -->
-
-# 📖 Blog App <a name="about-project"></a>
-
-> The Blog App is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
-
-## 🛠 Built With <a name="built-with"></a>
-
-### Tech Stack <a name="tech-stack"></a>
+[![Contributors](https://img.shields.io/github/contributors/tobuya/post_stream)](https://github.com/tobuya/post_stream/graphs/contributors)
+[![LastUpdate](https://img.shields.io/github/last-commit/tobuya/post_stream)](https://github.com/tobuya/post_stream/commits/main)
+[![Stargazers](https://img.shields.io/github/stars/tobuya/post_stream)](https://github.com/tobuya/post_streamy/stargazers)
+[![Issues](https://img.shields.io/github/issues/tobuya/post_stream)](https://github.com/tobuya/post_stream/issues)
+[![License](https://img.shields.io/github/license/tobuya/post_stream)](https://github.com/tobuya/post_stream/blob/main/LICENSE)
 
 <details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://ruby.org/">Ruby</a></li>
-  </ul>
+<summary>Table of Contents</summary>
+
+- [📰 Post Stream ](#-post_stream---rails-app-)
+  - [🧰 Tech Stack  ](#-tech-stack--)
+  - [✨ Key Features  ](#-key-features--)
+  - [🚀 Live Demo](#-live-demo--)
+  - [📘 Getting Started  ](#-getting-started--)
+    - [📋 Prerequisites](#-prerequisites)
+    - [📂 Setup](#-setup)
+    - [📥 Installation](#-installation)
+    - [💾 Database](#-database)
+    - [💻 Usage](#-usage)
+    - [🧪 Run tests](#-run-tests)
+  - [👨‍🚀 Authors  ](#-authors--)
+  - [🎯 Future Features  ](#-future-features--)
+  - [🤝 Contribution  ](#-contribution--)
+  - [💖 Show Your Support  ](#-show-your-support--)
+  - [🙏 Acknowledgements](#-acknowledgements)
+  - [📜 License ](#-license-)
 </details>
 
-<details>
-<summary>Database</summary>
-  <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
-  </ul>
-</details>
+# 📰 Post Stream <a name="about-project"></a>
 
-### Key Features <a name="key-features"></a>
-
-- **Shows list of posts created by members**
-- **Empowers readers to interact with the posts by adding comments**
-- **Empowers readers to interact with the posts by liking the posts**
+**Post Stream** is a classic example of a blog website. It is a fully functional website that will show the list of posts and empower readers to interact with them by adding comments and liking posts.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LIVE DEMO -->
+## 🧰 Tech Stack  <a name="tech-stack"></a>
+- Ruby on Rails
+- PostgreSQL
+- Devise
+- CanCanCan
+- RSpec
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## ✨ Key Features  <a name="key-features"></a>
+- Create and manage blog posts
+- Read posts by other users
+- Interact by giving likes/comments
+- User authentication and authorization
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link to be updated soon]
+ [To be Updated soon]
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+## 📘 Getting Started  <a name="getting-started"></a>
 
-<!-- GETTING STARTED -->
+To run this project locally, you'll need to follow these steps.
 
-## 💻 Getting Started <a name="getting-started"></a>
+### 📋 Prerequisites
 
-To get a local copy up and running, follow these steps.
+Make sure you have the following installed on your machine:
+- [Ruby 3.2.2 or higher](https://www.ruby-lang.org/en/)
+- [Rails 7.0.4 or higher](https://rubyonrails.org/)
+- [PostgreSQL 15.2 or higher](https://www.postgresql.org/)
 
-### Prerequisites
+### 📂 Setup
 
-In order to run this project you need:
-
-
-Example command:
-
-```sh
- gem install
-```
-
-
-### Setup
-
-Clone this repository to your desired folder:
-
-
-Example commands:
+Clone this repository to your desired folder.
 
 ```sh
-  cd my-folder
-  git clone git@github.com:tobuya/blog_app.git
+cd my-desired-folder
+git clone git@github.com:tobuya/post_stream.git
+cd post_stream
 ```
--
 
-### Install
+### 📥 Installation
 
-Install this project with:
-
-
-Example command:
+Install the required gems with:
 
 ```sh
-  cd blog_app
+bundle install
 ```
 
-### Run tests
+### 💾 Database
+
+Create the databases and run migrations with:
+
+```sh
+rails db:create
+rails db:migrate
+```
+
+To load the sample data, run:
+
+```sh
+rails db:seed
+```
+
+### 💻 Usage
+
+To run the development server, execute the following command:
+
+```sh
+rails server
+```
+
+### 🧪 Run tests
 
 To run tests, run the following command:
 
-
-Example command:
-
 ```sh
-  rubocop
+rspec spec --format doc
 ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- AUTHORS -->
-
-## 👥 Authors <a name="authors"></a>
+## 👨‍🚀 Authors  <a name="author"></a>
 
 👤 **Thomas Obuya**
 
-- GitHub: [@githubhandle](https://github.com/tobuya)
-- Twitter: [@twitterhandle](https://twitter.com/MullerTheGreat1)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/tobuya)
+- [GitHub](https://github.com/tobuya)
+- [Medium](https://medium.com/@tobuya)
+- [LinkedIn](https://linkedin.com/in/tobuya)
 
 👤 **Hein Thant**
 
-- GitHub: [@githubhandle](https://github.com/indiecodermm)
-- Gmail: hthant00chk@gmail.com
-- LinkedIn: [LinkedIn](https://linkedin.com/in/hthantoo)
+- [GitHub](https://github.com/indiecodermm)
+- [Medium](https://hthant.medium.com/)
+- [LinkedIn](https://linkedin.com/in/hthantoo)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+## 🎯 Future Features  <a name="future-features"></a>
 
-## 🔭 Future Features <a name="future-features"></a>
-
-
-- [ ] **Integration specs for Views and fixing n+1 problems**
-- [ ] **Add authorization rules.**
-- [ ] **Add API endpoints**
+- [ ] Search and filter users and posts
+- [ ] Implement sharing of posts by other users
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- CONTRIBUTING -->
-
-## 🤝 Contributing <a name="contributing"></a>
+## 🤝 Contribution  <a name="contribution"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/tobuya/post_stream/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- SUPPORT -->
+## 💖 Show Your Support  <a name="support"></a>
 
-## ⭐️ Show your support <a name="support"></a>
-
-If you like this project give a star ⭐️
+If you like this project, please consider giving it a ⭐.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- ACKNOWLEDGEMENTS -->
+## 🙏 Acknowledgements
 
-## 🙏 Acknowledgments <a name="acknowledgements"></a>
+I would like to thank all code reviewers for making this project better.
+I would also like to acknowledge the [Random User Generator](https://randomuser.me), a free and open source API for generating random user profile pictures data for this project.
 
-I would like to thank fellow Micronauts.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## 📝 License <a name="license"></a>
-This project is [MIT](./LICENCE) licensed.
+## 📜 License <a name="license"></a>
 
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

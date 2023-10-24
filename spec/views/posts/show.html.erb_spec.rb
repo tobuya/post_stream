@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Post show page', type: :feature do
   let!(:user) { User.create(name: 'Kai', bio: 'Soccer player', photo: 'kai.jpg') }
   let!(:post) { Post.create(title: 'Post1', text: 'Content for post 1', author: user) }
-  let!(:comment) { Comment.create(author: user, post: post, text: 'Comment 1') }
-  let!(:likes) { Like.create(author: user, post: post) }
+  let!(:comment) { Comment.create(author: user, post:, text: 'Comment 1') }
+  let!(:likes) { Like.create(author: user, post:) }
 
   before do
     visit user_post_path(user, post)

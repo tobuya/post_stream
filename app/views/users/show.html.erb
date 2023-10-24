@@ -1,20 +1,21 @@
 <main>
+    <%= render "shared/header", current_user: @current_user %>
+    <%= link_to "⬅️", root_path, class: "brand back" %>
     <div class="user-container">
         <section class="user">
-            <img src=<%= @user.photo %> alt="User Photo" class="user-photo">
+            <img src="<%= "https://randomuser.me/api/portraits/men/#{rand(1..80)}.jpg" %>" alt="No Profile Photo", class="user-photo-profile">
             <div class="user-details">
-                <h2 class="user-name"><%= @user.name%></h2>
+                <h2 class="user-name-profile"><%= @user.name %></h2>
                 <h5 class="user-post-count">Number of posts: <%= @user.posts_counter %> </h5>
             </div>
-            <% if @current_user == @user %>
-              <%= form_with url: destroy_user_session_path, method: :delete do |f| %>
-                 <%= f.submit "Log Out" %>
-              <% end %>
-            <% end %>
         </section>
         <section class="user-bio">
             <h3>Bio</h3>
-            <p><%= @user.bio %></p>
+            <% if @user.bio.present? %>
+                <p><%= @user.bio %></p>
+            <% else %>
+                <p><%= @user.name %> has not set a bio</p>
+            <% end %>
         </section>
         <section class="user-posts">
             <h3>Recent Posts</h3>
@@ -23,14 +24,14 @@
                 <div class="post">
                     <h4><%= post.title %></h4>
                     <p><%= truncate(post.text, length: 180) %></p>
-                    <p class="comment-like-count">Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %></p>
+                    <p class="comment-like-count">Comments 💬: <%= post.comments_counter %>, Likes 👍: <%= post.likes_counter %></p>
                 </div>
             </a>
             <% end %>
-            <button class="button">
-                <a href="<%=@user.id%>/posts/" class="user-post-link">See all posts</a>
+            <button class="all-post-button">
+                <a href="<%=@user.id%>/posts/" class="all-post-link">See all posts</a>
             </button>
         </section>
     </div>
-
+    <%= render "shared/footer", current_user: @current_user %>
 </main>

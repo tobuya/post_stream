@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.1'
+ruby '>= 3.0.1'
 
 # Authentication
 gem 'devise'
@@ -80,3 +80,8 @@ group :test do
 end
 
 gem 'rubocop', '>= 1.0', '< 2.0'
+
+gem 'tailwindcss-rails', '~> 2.0'
+
+# Helps integrate modern JS tools in Rails applications
+gem 'webpacker', '~> 5.0'

@@ -1,15 +1,23 @@
 <section>
     <%= render "shared/header", current_user: @current_user %>
-    <div class="homepage">
-    <% if user_signed_in? %>
-        <%= link_to "+ New Post", new_user_post_path(@current_user) %>
-    <% else %>
-        <p>Join Blog to create new post!</p>
-    <% end %>
+    <div class="user-status">
+      <% if user_signed_in? %>
+        <div class="current-user">
+          <p class="para"><%= link_to "+ New Post", new_user_post_path(@current_user) %></p>
+          <div class="users-container">
+            <% @users.each do |user| %>
+              <% unless user_signed_in? && user == @current_user%>
+                <%= render "shared/user_card", user: user %>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% else %>
+        <div class="public">
+            <p class="join shadow">Join PostStream to create and interact with posts</p>
+            <%= render "shared/public" %>
+        </div>
+      <% end %>
     </div>
-    <div class="users-container">
-    <% @users.each do |user| %>
-        <%= render "shared/user_card", user: user %>
-    <% end %>
-    </div>
+    <%= render "shared/footer", current_user: @current_user %>
 </section>

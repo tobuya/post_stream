@@ -1,42 +1,42 @@
+<%= render "shared/header", current_user: @current_user %>
+<%= link_to "⬅️", user_posts_path, class: "brand back" %>
 <main>
     <div class="post-container">
         <h2>
             <%= @post.title%> by <%= @post.author.name%>
         </h2>
-        <p class="comment-like-count">
-            Comments: <%= @post.comments_counter%>, Likes:<%= @post.likes_counter%>
-        </p>
-        <div>
+        <h6>
             <%= @post.text%>
-        </div>
+        </h6>
+        <p class="comment-like-count">
+            Comments 💬: <%= @post.comments_counter %>, Likes 👍: <%= @post.likes_counter %>
+        </p>
     </div>
     <div class="post-like-comment">
         <%= form_with model: @like, url: user_post_likes_path(1, @post), scope: :like do |form|%>
-            <%= form.submit 'Like post', class: 'button' %>
+            <%= form.submit '👍', class: 'button' %>
         <% end %>
-        <%= link_to "Comment", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
-        <%# Button to delete current post  %>
+        <%= link_to "💬", new_user_post_comment_path( post_id: @post.id), { class: "button comment-btn " } %>
         <% if can? :destroy, @post %>
             <%= form_with model: [@current_user, @post], method: :delete do |f| %>                        
-            <%= f.submit "Delete Post", class: "button" %>
+            <%= f.submit "🗑", class: "button" %>
             <% end %>
         <% end %>
     </div>
-    <div class="comments post-comments">
-        <h5>Comments</h5>
+    <div class="comments post-comment-container">
+        <h3>Comments</h3>
         <% @comments=Post.find(@post.id).comments %>
             <% @comments.each do |comment| %>
-                <p>
-                    <%= comment.author.name %> : <%= comment.text %>
+                <p id="single-comment">
+                  <span><%= comment.author.name %> : </span> <%= comment.text %>
                 </p>
                 <div>
-                <%# Button to delete each comment  %>
                     <% if can? :destroy, comment %>
                       <%= form_with model: [@current_user, comment.post, comment], method: :delete do |f| %>                        
-                      <%= f.submit "Remove Comment" %>
+                      <%= f.submit "Remove Comment", id: "remove-comment-button" %>
                       <% end %>
                     <% end %>
                 </div>
-            <% end %>
+        <% end %>
     </div>
 </main>

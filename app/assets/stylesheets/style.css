@@ -1,172 +1,249 @@
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 .header,
 .homepage {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
 }
 
 .homepage {
-    justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .logo {
-    font-size: 1.65rem;
-    font-weight: 800;
-}
-
-.users-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: space-around;
-    padding: 30px;
-}
-
-.new-post-section {
-    padding: 0 0 15px 30px;
+  font-size: 1.65rem;
+  font-weight: 800;
 }
 
 .users-link,
 .user-post-link {
-    text-decoration: none;
-    color: black;
+  text-decoration: none;
+  color: black;
+}
+
+.user-post-link {
+  border: 1px solid var(--gray);
 }
 
 .user {
-    display: flex;
-    justify-content: space-between;
-    padding: 30px;
-    gap: 15px;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 0.2fr 0.8fr;
+  padding: 0.25rem 1.25rem;
+}
+
+.user-photo-profile {
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  border-color: var(--gray);
+  border-radius: 8px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .user-details {
-    border: 1px solid black;
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 10px;
-    box-shadow: 0 2px 2px 2px black;
+  grid-row: 1 / 2;
+  grid-column: 2 / 3;
+  border: 1px solid var(--gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.125rem 0.75rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.user-name-profile {
+  font-weight: 350;
+  text-decoration: none;
+  font-size: x-large;
+  color: var(--primary);
 }
 
 .user-post-count {
-    align-self: flex-end;
-}
-
-.user-photo {
-    width: 98px;
-    height: 98px;
-    border: 1px solid black;
-    flex: 0.5;
-    box-shadow: 0 2px 2px 2px black;
+  align-self: flex-end;
+  color: var(--green);
 }
 
 .user-bio {
-    display: flex;
-    flex-direction: column;
-    margin: 0 30px 30px 30px;
-    gap: 15px;
-    border: 1px solid black;
-    box-shadow: 0 2px 2px 2px black;
-    height: 120px;
-    padding: 5px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--gray);
+  margin: 0.25rem 1.25rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 5px;
+}
+
+.user-bio h3 {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.user-bio p {
+  color: var(--darker);
+  opacity: 0.65;
+  margin-bottom: 0.5rem;
+  font-size: 15px;
+}
+
+.all-post-header {
+  text-align: center;
+  padding: 0.5rem 0;
+  color: var(--primary);
+  opacity: 0.5;
+  font-weight: 900;
 }
 
 .user-posts {
-    display: flex;
-    flex-direction: column;
-    margin: 0 30px 30px 30px;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0.25rem 1.25rem;
+}
+
+.all-post-container {
+  flex-direction: column-reverse;
+  gap: 1rem;
+}
+
+.user-posts h3 {
+  color: var(--green);
+  font-weight: 700;
 }
 
 .post {
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    gap: 15px;
-    padding: 5px;
-    box-shadow: 0 2px 2px 2px black;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 5px;
+  box-shadow: 0 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.post h4 {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+.comments h4 {
+  color: var(--primary);
+  opacity: 0.6;
+}
+
+.post h4:hover {
+  text-decoration: underline;
+  font-weight: 800;
+  color: var(--green);
 }
 
 .comment-like-count {
-    align-self: flex-end;
-    font-weight: bold;
+  align-self: flex-end;
+  font-weight: bold;
+  color: rgb(196 181 253);
 }
 
-.button {
-    width: 100px;
-    align-self: center;
-    height: 35px;
-    border: 1px solid black;
-    background-color: white;
-    box-shadow: 0 2px 2px 2px black;
-    font-weight: bold;
+.all-post-button {
+  align-self: center;
+  background-color: var(--green);
+  padding: 0.75rem 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+.all-post-button:hover {
+  background-color: var(--primary);
+}
+
+.all-post-link {
+  color: var(--white);
+  font-weight: bold;
 }
 
 .comments {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-    border: 1px solid black;
-    margin-top: 5px;
-    box-shadow: 0 2px 2px 2px black;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 1rem;
+  border: 0 2px 2px 2px solid var(--gray);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.post-comment-container {
+  margin: 1.2rem;
+}
+
+.post-comment-container h3 {
+  color: var(--blue);
+  font-weight: 500;
+}
+
+#remove-comment-button {
+  margin: 0.25rem 0 1rem 0;
+  cursor: pointer;
+  padding: 0.15rem 0.85rem;
+  background-color: var(--danger);
+  color: var(--gray);
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+#remove-comment-button:hover {
+  color: var(--white);
 }
 
 .post-container {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    padding: 5px;
-    border: 1px solid black;
-    margin: 30px;
-    box-shadow: 0 2px 2px 2px black;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 1rem;
+  margin: 1.2rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.post-comments {
-    margin: 0 30px;
+.post-container h2 {
+  color: var(--green);
+  font-weight: 700;
+  font-size: x-large;
+}
+
+.post-container h6 {
+  color: rgb(56 189 248);
 }
 
 .post-like-comment {
-    margin: 0 0 10px 30px;
-    display: flex;
-    gap: 15px;
+  margin: 1.2rem;
+  display: flex;
+  justify-content: space-between;
 }
 
-.new-comment-container,
-.new-post-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-top: 30px;
+.post-like-comment a,
+.button {
+  padding: 0.25rem 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 28vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--danger);
 }
 
-.comment-form,
+.post-like-comment a:hover,
+.button:hover {
+  font-size: larger;
+}
+
 .post-form {
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
 }
 
 .button:hover {
-    cursor: pointer;
-    box-shadow: none;
-    color: green;
-    border: 1px solid green;
-}
-
-.comment-btn {
-    text-decoration: none;
-    color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  cursor: pointer;
+  box-shadow: none;
+  color: green;
 }
