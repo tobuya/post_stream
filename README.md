@@ -156,6 +156,7 @@ If you like this project, please consider giving it a ⭐.
 ## 🙏 Acknowledgements
 
 I would like to thank all code reviewers for making this project better.
+I would also like to acknowledge the [Random User Generator](https://randomuser.me), a free and open source API for generating random user profile pictures data for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
