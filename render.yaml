@@ -1,18 +1,18 @@
 databases:
-  - name: mysite
-    databaseName: mysite
-    user: mysite
+  - name: post_stream_db
+    databaseName: post_stream_db
+    user: post_stream_db_user
 
 services:
   - type: web
-    name: mysite
+    name: post_stream
     runtime: ruby
     buildCommand: "./bin/render-build.sh"
     startCommand: "bundle exec puma -C config/puma.rb"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: mysite
+          name: post_stream_db
           property: connectionString
       - key: RAILS_MASTER_KEY
         sync: false
